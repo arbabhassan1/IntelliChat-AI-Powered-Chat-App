@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 dotenv.config(); // Load environment variables
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your frontend URL
+    origin: "https://intelli-chat-ai-powered-chat-app.vercel.app/", // Your frontend URL
   })
 );
 
