@@ -9,12 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 dotenv.config(); // Load environment variables
 app.use(
   cors({
-    origin: "https://intelli-chat-ai-powered-chat-app.vercel.app/", // Your frontend URL
+    origin: "https://intelli-chat-ai-powered-chat-app.vercel.app", // Your frontend URL
+    credentials: true, // Enable credentials if needed
   })
 );
-
 // or allow all origins (not recommended for production)
-app.use(cors());
+// app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
