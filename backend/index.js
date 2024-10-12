@@ -8,6 +8,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 dotenv.config(); // Load environment variables
 app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.post("/chat-api", async (req, res) => {
   const { message } = req.body;
   console.log(message);

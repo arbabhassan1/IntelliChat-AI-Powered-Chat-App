@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Create an instance of axios with custom settings
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000/", // Replace with your base URL
+  baseURL: "https://intelli-chat-backend.vercel.app/", // Replace with your base URL
   timeout: 10000, // Optional: specify a timeout (in milliseconds)
   headers: {
     "Content-Type": "application/json",
