@@ -35,6 +35,10 @@ app.post("/chat-api", async (req, res) => {
   res.send(result.response.text());
 });
 
+app.post("test-api", (req, res) => {
+  res.send("Test API");
+});
+
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
