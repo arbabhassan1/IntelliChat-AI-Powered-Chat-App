@@ -137,6 +137,9 @@ const ChatBox = () => {
             />
           </svg>
         </label>
+        <p className=" text-center sm:text-sm text-[13px] mt-2 ">
+          IntelliChat can make mistakes. Check important info.
+        </p>
       </div>
     </div>
   );
