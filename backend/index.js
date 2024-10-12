@@ -7,6 +7,13 @@ const cors = require("cors");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 dotenv.config(); // Load environment variables
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Your frontend URL
+  })
+);
+
+// or allow all origins (not recommended for production)
 app.use(cors());
 
 app.get("/", (req, res) => {
