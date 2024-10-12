@@ -35,7 +35,7 @@ app.post("/chat-api", async (req, res) => {
   res.send(result.response.text());
 });
 
-app.post("test-api", (req, res) => {
+app.post("/test-api", (req, res) => {
   res.send("Test API");
 });
 
