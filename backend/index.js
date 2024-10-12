@@ -30,7 +30,11 @@ app.post("/chat-api", async (req, res) => {
 
   // const result = await model.generateContent(prompt);
   // console.log(result.response.text());
-  res.send(process.env.API_KEY);
+  const key = process.env.API_KEY;
+  res.json({
+    message: message,
+    key: key,
+  });
   // res.send(result.response.text());
 });
 
