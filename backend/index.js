@@ -22,17 +22,16 @@ app.get("/", (req, res) => {
 
 app.post("/chat-api", async (req, res) => {
   const { message } = req.body;
-  console.log(message);
 
-  const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  // const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+  // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-  const prompt = message;
+  // const prompt = message;
 
-  const result = await model.generateContent(prompt);
-  console.log(result.response.text());
-
-  res.send(result.response.text());
+  // const result = await model.generateContent(prompt);
+  // console.log(result.response.text());
+  res.send(process.env.API_KEY);
+  // res.send(result.response.text());
 });
 
 app.post("/test-api", (req, res) => {
